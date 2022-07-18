@@ -1,0 +1,64 @@
+#company 
+  background: $gray
+  .container
+    padding-top: 0
+    position: relative
+    &:before 
+      @include corner
+      top: 40px
+    &:after 
+      @include corner
+      right: 80px
+      top: 40px
+      transform: rotate(90deg)
+
+.company__top-block
+  @media (max-width: 1199px) 
+    padding: 0
+    position: static
+    width: 100%
+  @media (min-width: 1200px)
+    padding: 0 20px
+    position: absolute
+    width: 50%
+
+h3
+  padding-top: 60px
+
+.company__middle-block > div
+  box-sizing: border-box
+  margin: 40px 0 20px 0
+  justify-content: flex-end
+  padding: 0 20px
+  transition: background 0.4s ease
+  @media (max-width: 1199px)  
+    height: auto
+    margin: 20px 0
+    padding: 0
+    transition: none
+  @media (min-width: 1200px) 
+    height: 580px
+    width: calc(100% * 1 / 3.001)
+  &:hover
+    @media (max-width: 1199px)  
+      background: none
+    @media (min-width: 1200px) 
+      background: $black
+
+.company__bottom-block 
+  > div:first-child 
+      background: $black
+      box-sizing: border-box
+      margin-right: 20px
+      padding: 20px
+      position: relative
+      width: calc(100% * 4 / 6.001)
+  > div:last-child 
+      border: 2px solid $blue
+      box-sizing: border-box
+      color: #fff
+      padding: 20px
+      width: calc(100% * 2 / 6.001 - 20px)
+
+.company__bottom-block > div:last-child > div:first-child 
+  padding-right: 20px

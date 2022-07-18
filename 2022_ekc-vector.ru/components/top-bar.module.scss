@@ -1,0 +1,19 @@
+@import '@/styles/local.scss';
+
+
+.topbar {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  width: 100%;
+
+  @media (max-width: 1280px) {
+    background-color: #2b3144;
+    color: #fff;
+    padding: 20px 16px;
+    position: sticky;
+    top: 0;
+  }
+}

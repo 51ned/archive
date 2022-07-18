@@ -1,0 +1,38 @@
+@import '@/styles/local.scss';
+
+
+.button {
+  background-color: #fff;
+  border-bottom: 2px solid #eef1f3;
+  border-right: 2px solid #eef1f3;
+  color: #000;
+  display: block;
+  padding: 24px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  @extend %regular_font_style;
+
+  @media (max-width: 1280px) {
+    border: none;
+    padding: 20px 16px;
+  }
+
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='20px' height='10px' viewBox='0 0 20 10'%3E%3Cpolygon points='1.415,1.415 8.586,8.586 10,10 11.414,8.586 18.585,1.415 17.171,0 10,7.172 2.829,0 '/%3E%3C/svg%3E");
+    content: '';
+    float: left;
+    height: 10px;
+    margin-top: 8px;
+    margin-right: 24px;
+    width: 20px;
+
+    @media (max-width: 1280px) { margin-right: 16px; }
+  }
+}
+
+.button.active {
+  border-bottom: none;
+
+  &::before { transform: rotate(180deg); }
+}

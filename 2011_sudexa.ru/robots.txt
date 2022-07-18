@@ -1,0 +1,12 @@
+User-agent: Yandex
+Crawl-delay: 10
+Disallow: /img
+Host: sudexa.ru
+
+User-agent: Googlebot
+Disallow: /img
+
+User-agent: *
+Disallow: /img
+
+Sitemap: http://sudexa.ru/Sitemap.xml

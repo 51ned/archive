@@ -1,0 +1,36 @@
+@import '@/styles/local.scss';
+
+
+.container {
+  display: flex;
+  gap: 36px;
+
+  @media (max-width: 1280px) {
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 36px 36px 24px;
+
+  @media (max-width: 1280px) {
+    padding: 19px 16px 20px 16px;
+    scroll-snap-align: start;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+    @extend %subtitle_font_style;
+
+    @media (max-width: 1280px) { padding-bottom: 19px; }
+  }
+
+  &__paragraph {
+    padding-bottom: 8px;
+    @extend %regular_font_style;
+  }
+}

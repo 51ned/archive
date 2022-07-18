@@ -1,0 +1,39 @@
+@import '@/styles/local.scss';
+
+
+.nav {
+  margin: 24px 0;
+  width: 100%;
+
+  &__list {
+    display: grid;
+    gap: 36px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    
+    @media (max-width: 1280px) {
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 100%;
+  }
+
+  &__link {
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+    display: inline-block;
+    margin-bottom: 24px;
+    padding-bottom: 2px;
+    @extend %subtitle_font_size;
+  }
+
+  &__desc {
+    text-align: justify;
+    @extend %smaller_font_style;
+  }
+}

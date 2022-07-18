@@ -1,0 +1,105 @@
+header 
+  background: $gray  
+  .container
+    box-sizing: border-box
+    padding-top: 40px
+    @media (max-width: 1199px) 
+      min-height: auto
+      justify-content: flex-start
+    @media (min-width: 1200px)  
+      min-height: 100vh
+      justify-content: space-between 
+
+// Nav  
+.nav-container
+  div:first-child > a 
+    display: inline-block
+  div:nth-child(2) 
+    margin-left: auto
+    margin-top: 31px
+
+.logo 
+  pointer-events: none
+.logo-image 
+  fill: $blue
+.logo-text 
+  fill: $primary-color
+
+nav 
+  display: flex
+  ul
+    list-style: none
+    li  
+      display: inline-block
+      padding: 0 15px  
+      a 
+        box-sizing: border-box
+        color: $regular-color
+        position: relative
+      a:hover 
+        color: $primary-color
+        text-decoration: none
+    li:not(:nth-child(6))   
+      a:after     
+        background-color: $blue
+        content: ""
+        display: block
+        height: 2px
+        position: absolute                 
+        width: 0%        
+        transition: width .3s ease-in-out
+      a:hover:after, 
+      a:focus:after 
+        width: 100%
+    li:nth-child(6)
+      padding-right: 0    
+      a
+        color: $regular-color
+        position: relative
+        span 
+          color: $primary-color
+          font-weight: 700  
+          border-bottom: 2px solid $blue     
+          padding-bottom: 2px 
+
+.uk-navbar-toggle 
+  color: $primary-color
+  display: flex
+  padding: 0 0 45px 0
+
+// Content
+.header-content
+  @media (max-width: 1199px) 
+    margin-bottom: none
+    padding: 0
+  @media (min-width: 1200px) 
+    margin-bottom: 40px
+    padding: 0 20px
+    div:first-child > p 
+      margin-bottom: 40px
+
+  .header-list > div:first-child > div,
+  .header-list > div:last-child > div
+    @media (max-width: 1199px)
+      padding: none
+    @media (min-width: 1200px)
+      padding: 6px 20px 0 0
+    
+// Bottom
+header > div:first-child > div:nth-child(3) 
+  align-items: flex-start
+  height: 36px
+  justify-content: space-between
+  width: 100%
+  @media (max-width: 1199px)
+    display: none    
+  @media (min-width: 1200px) 
+    display: flex
+  p  
+    margin-top: 18px
+
+.arrow 
+  fill: $blue 
+  
+ 
+  

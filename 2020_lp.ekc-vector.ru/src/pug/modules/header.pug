@@ -1,0 +1,46 @@
+header
+  div.container.flex-column
+    div.nav-container.flex-row
+      div
+        a(href='./')
+          object.logo(type='image/svg+xml' data='../src/img/logo.svg')
+      div
+        nav
+          ul.smaller-text
+            li
+              a(href='#expertise' uk-scroll) Экспертиза
+            li
+              a(href='#company' uk-scroll) Компания
+            li
+              a(href='#expert' uk-scroll) Эксперт
+            li
+              a(href='#prices' uk-scroll) Цены
+            li
+              a(href='#contacts' uk-scroll) Контакты
+            li  
+              a(href='tel:+74993945552') +7 499 
+                span 394-55-52
+            li
+              a.hidden-m(href='#mobile-menu' uk-toggle uk-navbar-toggle-icon)
+    div.header-content
+      div
+        h1 Экспертиза почерка
+        p.
+          Идентификационные (кто писал) и диагностические (состояние пишущего) исследования. <br>         
+          В досудебном (по вашей инициативе) и судебном (по определению суда) порядках. Рецензирование.
+      div.header-list.flex-column
+        div.flex-row
+          div
+            object(data='../src/img/invoice.svg')
+          div
+            p.paragraph Имеем все необходимые документы, <br> <a class='link' href='#license-modal' uk-toggle>комментарий</a>
+        div.flex-row
+          div
+            object(data='../src/img/invoice.svg')
+          div
+            p По оригиналу и копии документа, <br> <a class='link' href='#copy-modal' uk-toggle>позиция Верховного суда</a>
+    div
+      div
+        object(type='image/svg+xml' data='../src/img/arrow.svg')
+      div
+        p.smaller-text © ЭКЦ «Вектор», 2020 г.

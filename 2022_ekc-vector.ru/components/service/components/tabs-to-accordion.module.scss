@@ -1,0 +1,18 @@
+@import '@/styles/local.scss';
+
+
+.tabs {
+  display: grid;
+  grid-template-areas: 'tablist content';
+  grid-template-columns: max-content auto;
+
+  &__list { grid-area: tablist; }
+}
+
+.accordion {
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after { @extend %button_border; }  
+  } 
+}

@@ -1,0 +1,26 @@
+@import '@/styles/local.scss';
+
+
+.menu {
+  display: flex;
+  writing-mode: vertical-lr;
+
+  &__item:last-child > a {
+    border-right: 2px solid $text_border_color;
+    color: $text_color;
+    padding-right: 2px;
+  }
+
+  &__item:not(:last-child)::after {
+    background-image: url(../public/img/icons/triangle.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    padding: 24px 0;
+  }
+  
+  &__link {
+    @extend %smaller_font_size;
+    color: $muted_text_color;
+  }
+}

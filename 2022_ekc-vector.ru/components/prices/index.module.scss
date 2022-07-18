@@ -1,0 +1,73 @@
+@import '@/styles/local.scss';
+
+
+.accordion_wrapper {
+  padding-bottom: 36px;
+  @media (max-width: 1280px) { padding-bottom: 24px; }
+}
+
+.head {
+  display: flex;
+
+  &__service_title,
+  &__price_title {
+    align-items: center;
+    background-color: rgba(64, 70, 90, 1);
+    border-bottom: 2px solid #eef1f3;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    @extend %regular_font_size;
+  }
+
+  &__service_title {
+    border-radius: 8px 0 0 0;
+    border-right: 2px solid #eef1f3;
+    width: calc(100%/6*5);
+  }
+
+  &__price_title {
+    border-radius: 0 8px 0 0;
+    width: calc(100%/6*1);
+  }
+}
+
+.accordion {
+  display: grid;
+  grid-template-areas: 
+    'button price'
+    'content price';
+  grid-template-columns: calc(100%/6*5) calc(100%/6*1);
+  position: relative;
+
+  &:not(:last-child)::after {
+    @media (max-width: 1280px) {
+      @include button_border;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-areas:
+      'button'
+      'content';
+    grid-template-columns: 1fr;
+  }
+
+  &__button_container {
+    grid-area: button;
+  }
+
+  &__content_container { grid-area: content; }
+
+  &__price_container {
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 2px solid #eef1f3;
+    display: flex;
+    grid-area: price;
+    justify-content: center;
+    @extend %regular_font_size;
+  }
+}

@@ -1,0 +1,32 @@
+@import '@/styles/local.scss';
+
+
+.container:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.title {
+  padding-bottom: 8px;
+  @extend %smaller_font_style;
+}
+
+.list {
+  &__item {
+    color: $muted_text_color;
+    padding-left: 20px;
+    position: relative;
+    @extend %smaller_font_style;
+
+    &::before {
+      background-color: $decorative_el_color;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 11px;
+      width: 8px;
+    }
+  
+    &:not(:last-child) { padding-bottom: 4px; }
+  }
+}

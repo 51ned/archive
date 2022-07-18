@@ -1,0 +1,18 @@
+@import '@/styles/local.scss';
+
+.slider {
+  &__item {
+    height: 500px;
+    max-height: 100vh;
+    position: relative;
+  }
+  
+  &__controls {
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 24px;
+  }
+}

@@ -1,0 +1,26 @@
+@import '@/styles/local.scss';
+
+
+.list {
+  @media (max-width: 1280px) {
+    padding: 20px 0;
+  }
+
+  &__item {
+    border-bottom: none;
+    color: rgba(255, 255, 255, .6);
+    @extend %smaller_font_style;
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 6px;
+
+    @media (max-width: 1280px) {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.active {
+  color: #fff;
+}

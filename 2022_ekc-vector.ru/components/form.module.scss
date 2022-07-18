@@ -1,0 +1,99 @@
+@import '@/styles/local.scss';
+
+
+.form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 36px 36px 24px;
+
+  @media (max-width: 1280px) {
+    border-radius: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+    @extend %subtitle_font_style;
+  }
+
+  &__fieldset {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-areas:
+      'name phone comment'
+      'agreement agreement button';
+    grid-template-columns: .5fr .5fr 1fr;
+
+    @media (max-width: 1280px) {
+      grid-template-areas:
+        'name'
+        'phone'
+        'comment'
+        'agreement'
+        'button';
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__input { @extend %input_styles; }
+
+  &__name input,
+  &__phone input,
+  &__comment input {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin-top: 8px;
+    @extend %smaller_font_size;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__comment {
+    grid-area: comment;
+  }
+
+  &__name,
+  &__phone,
+  &__comment {
+    @extend %regular_font_style;
+  }
+
+  &__agreement {
+    align-items: center;
+    border: 1px solid $el_border_color;
+    background-color: $input_bg;
+    border-radius: 4px;
+    color: $muted_text_color;
+    display: flex;
+    grid-area: agreement;
+    padding: 0 8px;
+    @extend %smaller_font_size;
+
+    @media (max-width: 1280px) {
+      padding: 12px 8px;
+    }
+
+    & input {
+      border-radius: 4px;
+      height: 20px;
+      margin: 0 8px 0 0;
+      width: 20px;
+    }
+  }
+
+  &__button {
+    background-color: #3356d7;
+    border-radius: 4px;
+    color: #fff;
+    grid-area: button;
+    padding: 12px;
+    @extend %smaller_font_size;
+  }
+}

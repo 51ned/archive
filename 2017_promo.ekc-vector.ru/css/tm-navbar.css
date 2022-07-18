@@ -1,0 +1,40 @@
+.uk-navbar {
+    background-color: #333;
+}
+
+.uk-navbar-nav > li > a {
+    border-bottom: none;
+    color: #e9e9e9;
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+}
+
+.uk-navbar-nav > li:hover > a,
+.uk-navbar-nav > li > a:focus,
+.uk-navbar-nav > li.uk-open > a {
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.uk-navbar-nav > li.uk-active > a {
+    background-color: #505050;
+    color: #fff;
+}
+
+.uk-navbar-content {
+    padding: 0;
+}
+
+.uk-navbar-content > .uk-button {
+    background: #fc6059;
+    border-radius: 0;
+    color: #fff;
+    height: 40px;
+}
+
+.uk-navbar-content > .uk-button:hover {
+    background: #fc6059;
+}

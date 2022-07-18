@@ -1,0 +1,7 @@
+@import '@/styles/local.scss';
+
+
+.copyright {
+  color: $text_color;
+  @extend %smaller_font_size;
+}

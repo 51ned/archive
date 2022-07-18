@@ -1,0 +1,102 @@
+/* "Заводские настройки" */
+.jcarousel-container {
+    position: relative;
+}
+
+.jcarousel-list {
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.jcarousel-clip {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.jcarousel-list li, .jcarousel-item {
+    height: 75px;
+    float: left;
+    list-style: none;
+    width: 75px;
+}
+
+/* Размер плагина */
+.b-news .jcarousel-container-horizontal {
+    width: 960px;
+}
+    .b-news .jcarousel-clip-horizontal {
+        width: 960px;
+    }
+
+/* Размер и настройка внутреннего контейнера */
+.b-news .jcarousel-item, .b-news .jcarousel-list li {
+    height: 236px;
+    padding: 9px 18px;
+    width: 924px;
+}
+
+/* Размер и настройки внутренних подблоков */
+
+    .pbar {
+      width: 284px;
+    }
+
+    .pbar, .tbar1, .tbar2 {
+        background: #FFFFFF;
+        float: left;
+        height: 218px;
+        padding: 9px 0;
+    }
+        .pbar {
+            border-radius: 9px 0 0 9px;
+            padding: 9px 18px 9px 18px;
+        }
+            .tbar1, .tbar2 {
+                padding-right: 18px;
+                text-align: justify;
+                width: 586px;
+            }
+                .tbar2 {
+                    border-radius: 0 9px 9px 0;
+                }
+
+/* Внешний вид и расположение кнопок управления */
+.b-news .jcarousel-next-horizontal, .b-news .jcarousel-prev-horizontal {
+    background-image: url(../img/btn.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 110px;
+	position: absolute;
+    top: 75px;
+	width: 37px;
+    z-index: 3;
+}
+
+.b-news .jcarousel-next-horizontal {
+    background-position: 0 0px;
+    right: -10px;
+}
+    .b-news .jcarousel-next-horizontal:hover {
+        background-position: 0 -110px;
+    }
+        .b-news .jcarousel-next-horizontal:active {
+            background-position: 0 -220px;
+        }
+            .b-news .jcarousel-prev-horizontal {
+                background-position: 0 -330px;
+                left: -10px;
+            }
+                .b-news .jcarousel-prev-horizontal:hover {
+                    background-position: 0 -440px;
+                }
+                    .b-news .jcarousel-prev-horizontal:active  {
+                        background-position: 0 -550px;
+                    }

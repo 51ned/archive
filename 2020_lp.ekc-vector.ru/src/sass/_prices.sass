@@ -1,0 +1,173 @@
+#prices 
+  background: $gray 
+  .container
+    position: relative    
+    &:before 
+      @include corner
+      top: 40px
+    &:after 
+      @include corner
+      right: 80px
+      top: 40px
+      transform: rotate(90deg)
+
+.expertise__top-block 
+  > div:first-child 
+    box-sizing: border-box
+    padding: 0 20px
+    @media (min-width: 1200px)  
+      width: 60%
+    @media (max-width: 1199px) 
+      width: 100%  
+  > div:last-child 
+    background: $black
+    box-sizing: border-box
+    margin-bottom: 40px
+    margin-right: 20px
+    padding: 20px
+    @media (min-width: 1200px)
+      margin-top: 10px
+      width: calc(40% - 20px)
+    @media (max-width: 1199px)
+      margin-top: 20px
+      width: 100%
+
+table 
+  background: $black
+  border: 2px solid $gray
+  border-collapse: collapse
+  width: 100%
+  th 
+    padding: 20px 0
+  th, td 
+    border-bottom: 2px solid $gray
+  th, td:nth-child(2) 
+    color: $primary-color
+    font-weight: 400
+    text-align:center
+  th:nth-child(2), td:nth-child(2) 
+    border-left: 2px solid $gray
+    width: 15%
+  td:nth-child(2) 
+    vertical-align: middle
+
+.uk-accordion-title 
+  display: block
+  font-size: 1rem
+  line-height: 1.375rem
+  color: $primary-color
+  overflow: hidden
+  padding: 20px
+
+.uk-accordion-title:focus, .uk-accordion-title:hover 
+  color: $primary-color
+  text-decoration: none
+  outline: 0
+
+.uk-accordion-title:before 
+  content: ""
+  float: left
+  height: 10px
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234551b5' width='20px' height='10px' viewBox='0 0 20 10'%3E%3Cpolygon points='1.415,1.415 8.586,8.586 10,10 11.414,8.586 18.585,1.415 17.171,0 10,7.172 2.829,0 '/%3E%3C/svg%3E")
+  margin: 8px 20px 0 0
+  transition: .2s
+  width: 20px
+
+.uk-open > .uk-accordion-title:before 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234551b5' width='20px' height='10px' viewBox='0 0 20 10'%3E%3Cpolygon points='1.415,1.415 8.586,8.586 10,10 11.414,8.586 18.585,1.415 17.171,0 10,7.172 2.829,0 '/%3E%3C/svg%3E")
+  transform: rotate(180deg)
+  transition: .2s
+
+.uk-accordion-content 
+  margin-top: 0
+  padding-left: 20px
+
+.uk-accordion-content > ul 
+  position: relative
+
+.uk-accordion-content > ul:after 
+  background: $blue
+  content: ''
+  height: calc(100% - 23px)
+  left: 40px
+  position: absolute 
+  top: 12px  
+  width: 1px
+
+.uk-accordion-content > ul > li 
+  font-size: 16px
+  line-height: 1.5
+  position: relative
+
+.uk-accordion-content > ul > li:first-child 
+  padding-left: 50px
+.uk-accordion-content > ul > li:not(:first-child) 
+  padding-left: 70px
+
+.uk-accordion-content > ul > li:not(:first-child):after 
+  background: $blue
+  content: ''
+  height: 1px
+  left: 40px
+  position: absolute 
+  top: 12px 
+  width: 20px
+
+.prices__bottom-block 
+  margin-top: 40px
+  > div:first-child 
+    background: $black
+    box-sizing: border-box
+    padding: 20px
+    @media (min-width: 1200px)
+      width: 60%
+    @media (max-width: 1199px)  
+      width: 100%
+  > div:last-child 
+    box-sizing: border-box
+    padding: 20px
+    position: relative
+    @media (min-width: 1200px)
+      width: 40%
+    @media (max-width: 1199px)
+      width: 100%
+    &:before 
+      @include corner      
+      bottom: 0
+      right: 0
+      transform: rotate(180deg)
+
+#prices > div:nth-child(3) > div:first-child > div:nth-child(2) > div:not(:first-child) 
+  margin-left: 20px
+
+#prices > div:nth-child(3) > div:first-child > div:nth-child(2) > div:first-child > div:first-child,
+#prices > div:nth-child(3) > div:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child,
+#prices > div:nth-child(3) > div:first-child > div:nth-child(2) > div:last-child > div:first-child
+  padding-right: 20px
+
+// hueta
+// Style the buttons that are used to open and close the accordion panel
+.accordion 
+  background-color: #eee
+  color: #444
+  cursor: pointer
+  padding: 18px
+  width: 100%
+  text-align: left
+  border: none
+  outline: none
+  transition: 0.4s
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover 
+  background-color: #ccc
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel 
+  padding: 0 18px
+  background-color: white
+  display: none
+  overflow: hidden
+ 

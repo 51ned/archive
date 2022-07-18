@@ -1,0 +1,43 @@
+.tm-mouse-icon {
+    border: 2px solid #fff;
+    border-radius: 14px;
+    bottom: 40px;
+    box-sizing: border-box;
+    height: 48px;
+    position: absolute;
+    width: 28px;
+}
+.tm-mouse-icon > span {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    height: 4px;
+    left: 10px;
+    position: absolute;
+    top: -18px;
+    width: 4px;
+}
+.tm-mouse-icon > span::before, .tm-mouse-icon > span::after {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: 76px;
+    width: 4px;
+}
+.tm-mouse-icon > span::before {
+    top: -11px;
+}
+.tm-mouse-icon > span > span {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    display: block;
+    height: 10px;
+    position: relative;
+    top: 28px;
+    transition: top 0.15s ease-out 0s;
+    width: 4px;
+}
+.tm-mouse-icon.animate > span > span {
+    top: 36px;
+}

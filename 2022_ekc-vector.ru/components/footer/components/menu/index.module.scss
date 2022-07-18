@@ -1,0 +1,49 @@
+@import '@/styles/local.scss';
+
+
+.menu {
+  background-color: #40465a;
+  padding: 48px 120px;
+
+  @media (max-width: 1280px) {
+    padding: 24px 16px 8px 16px;
+  }
+
+  &__title {
+    color: #fff;
+    padding-bottom: 8px;
+    width: 100%;
+    @extend %subtitle_font_style;
+  }
+
+  &__description {
+    color: rgba(255, 255, 255, .6);
+    padding-bottom: 24px;
+    @extend %regular_font_style;
+
+    @media (max-width: 1280px) {
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.lists {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}
+
+.list {
+  position: relative;
+
+  @media (max-width: 1280px) {
+    &:not(:last-child)::after {
+      margin-left: 0 !important;
+      width: 100% !important;
+      @include button_border;
+    }
+  }
+}

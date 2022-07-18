@@ -1,0 +1,50 @@
+@import '1.settings.scss';
+@import '2.tools.scss';
+
+
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.woff2) format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include font-face('Montserrat', '../fonts/montserrat-regular', 400, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat-bold', 700, 'bold');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: $light_gray_bg;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+
+  &.blocked_on_desktop {
+    overflow: hidden;
+    margin-right: 17px !important;
+  }
+
+  &.blocked_on_mobile {
+    overflow: hidden;
+  }
+}
+
+h1 { @extend %h1_font_style; }
+
+h2, h3, h4, h5, h6 { @extend %h2_h6_font_style; }
+
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}

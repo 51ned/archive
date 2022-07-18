@@ -1,0 +1,512 @@
+/* HTML-тэги */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url(img/blight.png);
+    font: 13px/20px Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #B22222;
+    text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #B22222;
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+}
+
+/* Позиционирование */
+#main, #container {
+    position: relative;
+}
+    #main {
+        min-height: 100%;
+    }
+      * html #main {
+          height: 100%;
+      }
+          #container {
+              top: 234px;
+          }
+              #hwrapper, #twrapper {
+                  position: absolute;
+              }
+                      #hwrapper {
+                          top: 53px;
+                      }
+                          #twrapper {
+                              top: 0;
+                          }
+                              #buffer {
+                                  clear: both;
+                                  height: 454px;
+                              }
+                                  #fwrapper {
+                                      margin-top: -200px;
+                                  }
+
+/* Общие классы */
+.fixed {
+    margin: 0 auto;
+    width: 960px;
+}
+    .full {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+.hbox, .fbox {
+    float: left;
+}
+    .hbox {
+        padding-left: 10px;
+        width: 470px;
+    }
+        .fbox {
+            width: 443px;
+        }
+
+.tarea, .clist {
+    color: #313335;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+    .rtarea {
+        text-align: right;
+    }
+
+.dshadow {
+    background: url(img/mbgrnd.png) repeat scroll 0 0 transparent;
+    box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.wht, .rwht {
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+    .wht {
+        padding: 9px 9px 9px 18px;
+    }
+        .rwht {
+            padding: 9px 18px 9px 9px;
+        }
+
+/* Эллементы страницы */
+/* Toolbar */
+#twrapper {
+    background: #45484C;
+    font-size: 11px;
+    padding: 6px 0;
+    text-align: left;
+}
+    #toolbar li {
+        display: inline;
+        padding-left: 10px;
+    }
+            #toolbar a {
+                color: #98999A;
+                text-decoration: none;
+            }
+                #toolbar a:hover {
+                    color: #B22222;
+                    text-decoration: underline;
+                }
+
+/* Header */
+#header {
+    background: #FFFFFF;
+    height: 100px;
+    padding: 10px 0;
+}
+        #brand a {
+            background-image: url(img/lgtp.png);
+            display: block;
+            height: 100px;
+            float: left;
+            width: 100px;
+        }
+            #brand a:hover {
+                background-image: url(img/lgtp-hvr.png);
+            }
+                #brand p, #phone p {
+                    font-family: Tahoma, sans-serif;
+                    font-weight: 600;
+                    color: #45484C;
+                    text-transform: uppercase;
+                }
+                        #brand p {
+                            font-size: 18px;
+                            letter-spacing: 2px;
+                            line-height: 1.0;
+                            padding: 1px 0 0 110px;
+                        }
+                            #brand p:first-letter {
+                                color: #B22222;
+                                font-size: 24px;
+                            }
+                                #phone {
+                                    padding-top: 21px;
+                                }
+                                #phone p {
+                                    font-size: 18px;
+                                    padding-right: 10px;
+                                    text-align: right;
+                                }
+                                    #phone span {
+                                        color: #B22222;
+                                    }
+
+
+/* Menu */
+#menu {
+    padding: 10px 0 10px 0;
+    text-align: left;
+}
+    .points {
+        display: inline;
+        margin-left: 10px
+    }
+        .points a {
+            background: #FFFFFF;
+            border-bottom: 1px solid #DDDEDC;
+            border-top: 1px solid #FFFFFF;
+            color: #45484C;
+            font: 14px Arial, sans-serif;
+            padding: 4px;
+            text-decoration: none;
+        }
+            .points a:hover {
+                border-bottom: 1px solid #FFFFFF;
+                border-top: 1px solid #DDDEDC;
+                color: #6495ED;
+            }
+                .active a {
+                    background: #DEDFDC;
+                    border-color: #B8B9B6 #D4D5D2 #DDDEDB;
+                    border-left: 1px solid #D4D5D2;
+                    border-right: 1px solid #D4D5D2;
+                    box-shadow: 0 1px 0 #FFFFFF;
+                    color: #B22222;
+                    margin: 0;
+                }
+
+/* Content */
+    #clayout {
+      float: left;
+      padding: 9px 9px 9px 18px;
+      text-align: justify;
+      width: 603px;
+    }
+        .cheader {
+            float: left;
+            width: 100%
+        }
+            .title {
+                color: #FFFFFF;
+                float: left;
+                line-height: 36px;
+                position: relative;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+                .title:before {
+                    background: url(img/h.png) no-repeat scroll 0 0 transparent;
+                    bottom: -7px;
+                    content: "";
+                    display: block;
+                    height: 7px;
+                    left: 0;
+                    position: absolute;
+                    width: 10px;
+                }
+                    .company {
+                        background-color: #45484C;
+                        margin-left: -46px;
+                        padding: 0 11px 0 11px;
+                }
+                        .news {
+                            background-color: #45484C;
+                            padding: 0 11px 0 11px;
+                            margin: 0 0 0 -28px;
+                        }
+                            .ptext {
+                                padding-top: 18px;
+                            }
+                                .clist {
+                                    clear: both;
+                                    padding-left: 13px;
+                                }
+                                    .clist span {
+                                        color: #313335;
+                                    }
+                                        .clist li {
+                                            color: #6495ED;
+                                            font-size: 13px;
+                                            list-style-type: disc;
+                                            padding-left: 18px;
+                                            padding-top: 18px;
+                                        }
+                                            .sclist li {
+                                                list-style-type: circle;
+                                            }
+                                                #slayout {
+                                                    float: right;
+                                                    margin: 0;
+                                                }
+                                                    .sbar {
+                                                        margin-bottom: 20px;
+                                                        padding: 9px 18px 9px 9px;
+                                                        text-align: left;
+                                                        width: 283px;
+                                                    }
+                                                        .uheader {
+                                                            font-size: 14px;
+                                                            padding-top: 54px;
+                                                            text-align: center;
+                                                        }
+                                                            .fpar {
+                                                                padding-top: 54px;
+                                                            }
+
+/* Выезжающий текст */
+#panel_1, #panel_2, #panel_3, #panel_4 {
+    background: #6495ED;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12) inset, 0 0 30px rgba(0, 0, 0, 0.1) inset, 0 1px 1px rgba(0, 0, 0, 0.12);
+    display: none;
+    margin: 18px -18px 0 -9px;
+    padding-left: 9px;
+}
+    #panel_1 li, #panel_2 li, #panel_3 li, #panel_4 li {
+        color: #FFFFFF;
+        list-style-type: circle;
+        padding: 9px 0 9px 9px;
+    }
+        #panel_1 a, #panel_2 a, #panel_3 a,  #panel_4 a {
+            color: #FFFFFF;
+        }
+          #panel_hotosho {
+            background: #fff;
+            display: none;
+            margin: 0;
+          }
+          #panel_hotosho2 {
+            background: #fff;
+            display: none;
+            margin: 0;
+          }
+
+/* Footer */
+#fwrapper {
+    background: url(img/bdark.png);
+    border-top: 10px solid #F2F2F0;
+    height: auto;
+}
+    #footer {
+        padding: 10px 0;
+    }
+        #vcomments {
+            padding-right: 20px;
+            float: left;
+        }
+                .fb-comments {
+                    background: #FFFFFF;
+                }
+                    #uwrapper {
+                        background: #313335;
+                        height: 62px;
+                        padding-top: 10px;
+                    }
+                        #utools {
+                            float: left;
+                        }
+                            #uscroll {
+                                float: right;
+                            }
+                                #uground li {
+                                    display: inline;
+                                    padding-right: 10px;
+                                }
+                                    #top {
+                                        background: url(img/top.png) no-repeat scroll 0 0 transparent;
+                                        display: block;
+                                        height: 30px;
+                                        text-decoration: none;
+                                        width: 29px;
+                                    }
+                                        #top:hover {
+                                            background-position: 0 -35px;
+                                        }
+                                            #umenu {
+                                                background: #313335;
+                                                color: #98999A;
+                                                font-size: 11px;
+                                                text-align: center;
+                                                text-decoration: none;
+                                            }
+                                                #umenu a {
+                                                    color: #98999A;
+                                                    text-decoration: none;
+                                                }
+                                                    #umenu a:hover {
+                                                        color: #B22222;
+                                                        text-decoration: underline;
+                                                    }
+
+/* Эллементы отдельных страниц */
+#feedback, #representation {
+    margin-left: 20px;
+    padding: 9px 18px 9px 9px;
+}
+#representation {
+    margin-bottom: 20px;
+}
+
+    #map {
+        padding: 9px 9px 9px 18px;
+    }
+        #YMapsID-1017 {
+            height: 416px;
+            margin-top: 18px;
+            width: 416px;
+        }
+            .fsize {
+                padding: 9px 9px 9px 18px;
+                text-align: justify;
+                width: 933px;
+            }
+                #contact-wrapper {
+                    margin:0 auto;
+                    padding-top: 36px;
+                    width: 416px;
+                }
+                    #contact-wrapper div {
+                    	clear: both;
+                    	margin: 18px 0;
+                    }
+                        #contact-wrapper label {
+                        	display: block;
+                        	float: none;
+                        	width: auto;
+                        }
+                            form#contactform input {
+                            	border-color: #B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+                            	border-style: solid;
+                            	border-width: 1px;
+                            }
+                                form#contactform textarea {
+                                	border-color: #B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+                                	border-style: solid;
+                                	border-width: 1px;
+                                }
+
+ .leftimg {
+    float: left;
+    margin: 0 18px 9px 0;
+    }
+ .rightimg {
+    float: right;
+    margin: 0 0 0 18px;
+    }
+  .htext {
+    text-align: justify;
+  }
+  .hlayout {
+    margin-top: 18px;
+  }
+  .hheader {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+ .jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

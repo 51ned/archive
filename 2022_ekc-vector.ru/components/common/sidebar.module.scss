@@ -1,0 +1,27 @@
+@import '@/styles/local.scss';
+
+
+.sidebar_container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.left_plug {
+  height: 24px;
+  width: 24px;
+}
+
+.right_plug {
+  height: 48px;
+  width: 24px;
+}

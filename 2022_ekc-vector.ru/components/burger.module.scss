@@ -1,0 +1,15 @@
+@import '@/styles/local.scss';
+
+.burger {
+  line-height: 1;
+  
+  &__icon {
+    @media (max-width: 1280px) {
+      fill: #fff;
+    }
+  }
+
+  &__icon:hover {
+    fill: blue;
+  }
+}

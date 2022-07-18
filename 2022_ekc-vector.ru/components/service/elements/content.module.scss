@@ -1,0 +1,23 @@
+@import '@/styles/local.scss';
+
+
+.content {
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-sizing: border-box;
+  grid-area: content;
+  max-height: 360px;
+  overflow-x: auto;
+  padding: 24px 36px 36px 24px;
+  text-align: justify;
+
+  @media (max-width: 1280px) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-height: 100%;
+    overflow-x: hidden;
+    padding: 20px 16px;
+    text-align: left;
+  }
+}

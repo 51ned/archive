@@ -1,0 +1,24 @@
+@import '@/styles/local.scss';
+
+
+.content {
+  background-color: #fff;
+  border-bottom: 2px solid #eef1f3;
+  border-right: 2px solid #eef1f3;
+  box-sizing: border-box;
+  grid-area: content;
+  padding: 0 24px 24px 68px;
+  text-align: left;
+  width: 1fr;
+
+  @media (max-width: 1280px) {
+    border: none;
+    padding: 20px 16px;
+  }
+}
+
+.price {
+  display: none;
+  @extend %smaller_font_size;
+  @media (max-width: 1280px) { display: block; }
+}

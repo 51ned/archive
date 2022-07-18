@@ -1,0 +1,17 @@
+@import '@/styles/local.scss';
+
+
+.phone {
+  @extend %smaller_font_size;
+  
+  &__code {
+    color: $muted_text_color;
+    @media (max-width: 1280px) { color: #fff; }
+  }
+  
+  &__number {
+    color: $text_color;
+    font-weight: 700;
+    @media (max-width: 1280px) { color: #fff; }
+  }
+}
